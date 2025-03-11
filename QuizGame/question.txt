@@ -1,0 +1,10 @@
+1|What is the capital of India?|Mumbai|Delhi|Kolkata|Chennai|Delhi
+2|What is the capital of USA?|New York|Washington DC|Los Angeles|Chicago|Washington DC
+3|What is the capital of UK?|Manchester|Birmingham|London|Liverpool|London
+4|What is the capital of Australia?|Sydney|Melbourne|Canberra|Perth|Canberra
+5|What is the capital of Japan?|Tokyo|Osaka|Kyoto|Hiroshima|Tokyo
+6|What is the capital of China?|Shanghai|Beijing|Hong Kong|Shenzhen|Beijing
+7|What is the capital of Russia?|Moscow|St. Petersburg|Vladivostok|Novosibirsk|Moscow
+8|What is the capital of Brazil?|Sao Paulo|Rio de Janeiro|Brasilia|Salvador|Brasilia
+9|What is the capital of South Africa?|Johannesburg|Cape Town|Pretoria|Durban|Pretoria
+10|What is the capital of Canada?|Toronto|Vancouver|Ottawa|Montreal|Ottawa
