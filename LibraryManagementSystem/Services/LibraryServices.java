@@ -11,6 +11,16 @@ public class LibraryServices {
     private List<Book> bookList = new ArrayList<>();
     private List<User> userList = new ArrayList<>();
 
+    public List<Book> getBookList() {
+        return bookList;
+    }
+
+    public List<User> getUserList() {
+        return userList;
+    }
+
+    
+
     public void addBooks(String BooKName, String Author, int Price, int TotalNumberOfCopiesAvailable) {
         Book book = new Book(BooKName, Author, Price, TotalNumberOfCopiesAvailable);
         bookList.add(book);
