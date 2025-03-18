@@ -6,16 +6,20 @@ import LibraryManagementSystem.Utility.Helper;
 
 public class CoreLibraryServices {
 
-    LibraryServices libraryServices = new LibraryServices();
+    // LibraryServices libraryServices = new LibraryServices();
 
     public void borrowBook(String userId, String bookId) {
-        User user = Helper.findUserById(userId, libraryServices.getUserList());
-        Book book = Helper.findBookById(bookId, libraryServices.getBookList());
+        User user = Helper.findUserById(userId, LibraryServices.getUserList());
+        Book book = Helper.findBookById(bookId, LibraryServices.getBookList());
 
+        System.out.println(user);
+        System.out.println(book);
+        
         if (user == null) {
             System.out.println("User not found!");
             return;
         }
+
         if (book == null) {
             System.out.println("Book not found!");
             return;
@@ -31,8 +35,8 @@ public class CoreLibraryServices {
     }
 
     public void returnBook(String userId, String bookId) {
-        User user = Helper.findUserById(userId, libraryServices.getUserList());
-        Book book = Helper.findBookById(bookId, libraryServices.getBookList());
+        User user = Helper.findUserById(userId, LibraryServices.getUserList());
+        Book book = Helper.findBookById(bookId, LibraryServices.getBookList());
 
         if (user == null) {
             System.out.println("User not found!");

@@ -8,14 +8,14 @@ import java.util.List;
 
 public class LibraryServices {
 
-    private List<Book> bookList = new ArrayList<>();
-    private List<User> userList = new ArrayList<>();
+    private static  List<Book> bookList = new ArrayList<>();
+    private static  List<User> userList = new ArrayList<>();
 
-    public List<Book> getBookList() {
+    public static List<Book> getBookList() {
         return bookList;
     }
 
-    public List<User> getUserList() {
+    public static List<User> getUserList() {
         return userList;
     }
 
@@ -31,7 +31,7 @@ public class LibraryServices {
 
     public void deleteBook(String BookId) {
         for (Book book : bookList) {
-            if (book.getBookId() == BookId) {
+            if (book.getBookId().equals(BookId)) {
                 bookList.remove(book);
                 System.out.println("Book with id: " + BookId + " deleted successfully !!");
             } else {
@@ -54,6 +54,19 @@ public class LibraryServices {
         }
     }
 
+    public void listAllUsers() {
+        if(userList.isEmpty()) {
+            System.out.println("No Users are available now !");
+            return;
+        }
+        System.out.println("Available books are : --------------->");
+        int i = 1;
+        for (User user : userList) {
+            System.out.println(i + " -> " + user.getUserName() + " | " + "User Id: " + user.getUserId());
+            i++;
+        }
+    }
+
     public void registerUser(String UserName, String Address, Number Contact, int CreditLeft, int MaxBookBorrowCount) {
         User user = new User(UserName, Address, Contact, CreditLeft, MaxBookBorrowCount);
         userList.add(user);
@@ -64,7 +77,7 @@ public class LibraryServices {
 
     public void deleteUser(String UserId) {
         for (User user : userList) {
-            if (user.getUserId() == UserId) {
+            if (user.getUserId().equals(UserId)) {
                 userList.remove(user);
                 System.out.println("User with id: " + UserId + " deleted successfully !!");
             } else {

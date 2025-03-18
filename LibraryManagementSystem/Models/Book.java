@@ -15,7 +15,7 @@ public class Book {
         this.Author = Author;
         this.Price = Price;
         this.TotalNumberOfCopiesAvailable = TotalNumberOfCopiesAvailable;
-        this.isAvailable = TotalNumberOfCopiesAvailable == 0 ? true : false;
+        this.isAvailable = TotalNumberOfCopiesAvailable == 0 ? false : true;
     }
 
     public String getBookId() {

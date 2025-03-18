@@ -1,5 +1,6 @@
 package LibraryManagementSystem.Models;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class User {
@@ -11,7 +12,6 @@ public class User {
     private int CreditLeft;
     private int MaxBookBorrowCount;
     private List<Book> BorrowedBooks;
-
     public User(String userName, String address, Number contact, int creditLeft,
             int maxBookBorrowCount) {
         UserId = "UR" + counter++;
@@ -20,6 +20,7 @@ public class User {
         Contact = contact;
         CreditLeft = creditLeft;
         MaxBookBorrowCount = maxBookBorrowCount;
+        BorrowedBooks = new ArrayList<>();
     }
 
     public String getUserId() {
@@ -51,6 +52,11 @@ public class User {
     }
 
     public void borrowBook(Book book) {
+
+        if(BorrowedBooks == null) {
+            this.BorrowedBooks = new ArrayList<>();
+        }
+
         if (book.getIsAvailable()) {
             BorrowedBooks.add(book);
             book.borrowBook();
